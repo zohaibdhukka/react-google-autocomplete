@@ -35,7 +35,7 @@ export default class ReactGoogleAutocomplete extends React.Component {
 
     this.disableAutofill();
 
-    this.autocomplete = new google.maps.places.Autocomplete(this.refs.input, config);
+    this.autocomplete = new window.google.maps.places.Autocomplete(this.refs.input, config);
 
     this.event = this.autocomplete.addListener('place_changed', this.onSelected.bind(this));
   }
